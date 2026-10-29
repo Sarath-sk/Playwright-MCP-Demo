@@ -1,0 +1,6 @@
+Scenario,Type,Priority,Preconditions,Steps,Assertions
+"Successful login with standard_user",Positive,P0,"Login page is displayed.","Enter username standard_user; enter password secret_sauce; select Login.","Inventory page displays the Products heading; URL is https://www.saucedemo.com/inventory.html."
+"Locked out user validation",Negative,P1,"Login page is displayed.","Enter username locked_out_user; enter password secret_sauce; select Login.","Error reads ""Epic sadface: Sorry, this user has been locked out.""; login page remains displayed."
+"Empty username submission",Corner,P1,"Login page is displayed; both fields are empty.","Select Login without entering a username or password.","Error reads ""Epic sadface: Username is required""; login page remains displayed."
+"Empty password submission",Corner,P1,"Login page is displayed.","Enter username standard_user; leave password empty; select Login.","Error reads ""Epic sadface: Password is required""; login page remains displayed."
+"Invalid credentials",Negative,P1,"Login page is displayed.","Enter an invalid username and password; select Login.","Error reads ""Epic sadface: Username and password do not match any user in this service""; login page remains displayed."
