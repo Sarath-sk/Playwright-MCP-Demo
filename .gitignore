@@ -1,0 +1,25 @@
+# Local Python environments
+.venv/
+venv/
+env/
+
+# Python-generated files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Test and coverage artifacts
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Playwright artifacts
+test-results/
+playwright-report/
+playwright/.cache/
+
+# Local editor and OS files
+.DS_Store
+.vscode/*
+!.vscode/mcp.json
